@@ -262,7 +262,7 @@ function! clang_format#replace_ranges(ranges, ...) abort
     let winview = winsaveview()
     let splitted = split(formatted, '\n', 1)
 
-    silent! undojoin
+    "silent! undojoin
     if line('$') > len(splitted)
         execute len(splitted) .',$delete' '_'
     endif
